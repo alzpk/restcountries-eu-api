@@ -1,6 +1,6 @@
 <?php
 
-namespace Alzpk\RestCountriesAPI;
+namespace Alzpk\RestCountriesEuAPI;
 
 /**
  * @method array all()
