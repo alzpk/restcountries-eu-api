@@ -1,0 +1,14 @@
+{
+    "name": "alzpk/restcountries-eu-api",
+    "description": "Restcountries.eu API PHP wrapper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alzpk",
+            "email": "mh1986@outlook.dk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
