@@ -7,7 +7,7 @@ _Example of usage_
 
 require_once './vendor/autoload.php';
 
-$restCountriesEuAPI = new \Alzpk\restCountriesEuAPI\restCountriesEuAPI();
+$restCountriesEuAPI = new \Alzpk\RestCountriesEuAPI\RestCountriesEuAPI();
 
 print_r($restCountriesEuAPI->all()->get());
 ```
