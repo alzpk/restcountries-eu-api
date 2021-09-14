@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Alzpk\RestCountriesEuAPI;
 
 /**
@@ -17,7 +19,6 @@ namespace Alzpk\RestCountriesEuAPI;
 
 class RestCountriesEuAPI
 {
-
     /**
      * Constant that contains the base uri.
      */

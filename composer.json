@@ -17,7 +17,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Alzpk\\ValueObjets\\Tests\\": "tests/"
+            "Alzpk\\RestCountriesEuAPI\\Tests\\": "tests/"
         }
     },
     "require": {
