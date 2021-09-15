@@ -47,4 +47,13 @@ class Currency
     {
         return $this->symbol;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'code' => $this->code,
+            'name' => $this->name,
+            'symbol' => $this->symbol,
+        ];
+    }
 }

@@ -71,4 +71,18 @@ class RegionalBloc
     {
         return $this->otherNames;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'acronym' => $this->acronym,
+            'name' => $this->name,
+            'other_acronyms' => array_map(function (Acronym $acronym) {
+                return $acronym->toString();
+            }, $this->otherAcronyms),
+            'other_names' => array_map(function (Name $name) {
+                return $name->toString();
+            }, $this->otherNames),
+        ];
+    }
 }

@@ -33,4 +33,12 @@ class Translation
     {
         return $this->value;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'country_code' => $this->countryCode,
+            'value' => $this->value
+        ];
+    }
 }

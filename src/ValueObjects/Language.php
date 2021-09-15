@@ -58,4 +58,14 @@ class Language
     {
         return $this->nativeName;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'iso639_1' => $this->iso6391,
+            'iso639_2' => $this->iso6392,
+            'name' => $this->name,
+            'native_name' => $this->nativeName,
+        ];
+    }
 }

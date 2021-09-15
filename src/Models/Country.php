@@ -341,15 +341,33 @@ final class Country implements ModelInterface
             'area' => $this->area,
             'flag' => $this->flag,
             'cioc' => $this->cioc,
-            'top_level_domain' => $this->topLevelDomain,
-            'calling_codes' => $this->callingCodes,
-            'alt_spellings' => $this->altSpellings,
-            'timezones' => $this->timezones,
-            'borders' => $this->borders,
-            'currencies' => $this->currencies,
-            'languages' => $this->languages,
-            'translations' => $this->translations,
-            'regional_blocs' => $this->regionalBlocs,
+            'top_level_domain' => array_map(function (TopLevelDomain $topLevelDomain) {
+                return $topLevelDomain->toString();
+            }, $this->topLevelDomain),
+            'calling_codes' => array_map(function (CallingCode $callingCode) {
+                return $callingCode->toInt();
+            }, $this->callingCodes),
+            'alt_spellings' => array_map(function (AlternativeSpelling $alternativeSpelling) {
+                return $alternativeSpelling->toString();
+            }, $this->altSpellings),
+            'timezones' => array_map(function (Timezone $timezone) {
+                return $timezone->toString();
+            }, $this->timezones),
+            'borders' => array_map(function (Border $border) {
+                return $border->toString();
+            }, $this->borders),
+            'currencies' => array_map(function (Currency $currency) {
+                return $currency->toArray();
+            }, $this->currencies),
+            'languages' => array_map(function (Language $language) {
+                return $language->toArray();
+            }, $this->languages),
+            'translations' => array_map(function (Translation $translation) {
+                return $translation->toArray();
+            }, $this->translations),
+            'regional_blocs' => array_map(function (RegionalBloc $regionalBloc) {
+                return $regionalBloc->toArray();
+            }, $this->regionalBlocs),
         ];
     }
 }
