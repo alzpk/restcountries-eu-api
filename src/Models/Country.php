@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Alzpk\RestCountriesEuAPI\Models;
 
 use Alzpk\RestCountriesEuAPI\ValueObjects\AlternativeSpelling;
@@ -12,7 +14,7 @@ use Alzpk\RestCountriesEuAPI\ValueObjects\Timezone;
 use Alzpk\RestCountriesEuAPI\ValueObjects\TopLevelDomain;
 use Alzpk\RestCountriesEuAPI\ValueObjects\Translation;
 
-class Country
+final class Country implements ModelInterface
 {
     private string $name;
     private string $nativeName;
