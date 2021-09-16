@@ -2,8 +2,6 @@
 
 namespace Alzpk\RestCountriesEuAPI\ValueObjects;
 
-use Alzpk\RestCountriesEuAPI\ValueObjects\Name;
-
 class RegionalBloc
 {
     private string $acronym;
