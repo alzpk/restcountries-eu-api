@@ -7,7 +7,7 @@ namespace Alzpk\RestCountriesEuAPI;
 use Alzpk\RestCountriesEuAPI\Models\Country;
 use GuzzleHttp\Client;
 
-class RestCountriesClient implements ClientInterface
+final class RestCountriesClient implements ClientInterface
 {
     CONST baseUri = 'https://restcountries.eu';
 
