@@ -22,6 +22,7 @@ class CountryTest extends TestCase
         $model = new Country(
             'Denmark',
             'Danmark',
+            'Copenhagen',
             208,
             'DK',
             'DNK',
@@ -74,6 +75,7 @@ class CountryTest extends TestCase
         $this->assertInstanceOf(Country::class, $model);
         $this->assertSame('Denmark', $model->getName());
         $this->assertSame('Danmark', $model->getNativeName());
+        $this->assertSame('Copenhagen', $model->getCapital());
         $this->assertSame(208, $model->getNumericCode());
         $this->assertSame('DK', $model->getAlpha2Code());
         $this->assertSame('DNK', $model->getAlpha3Code());

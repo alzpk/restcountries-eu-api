@@ -18,6 +18,7 @@ final class Country implements ModelInterface
 {
     private string $name;
     private string $nativeName;
+    private string $capital;
     private int $numericCode;
     private string $alpha2Code;
     private string $alpha3Code;
@@ -61,7 +62,7 @@ final class Country implements ModelInterface
      * @param list<Translation> $translations
      * @param list<RegionalBloc> $regionalBlocs
      */
-    public function __construct(string $name, string $nativeName, int $numericCode, string $alpha2Code,
+    public function __construct(string $name, string $nativeName, string $capital, int $numericCode, string $alpha2Code,
                                 string $alpha3Code, string $region, string $subregion, int $population,
                                 ?float $lat, ?float $lng, string $demonym, float $area, string $flag,
                                 ?string $cioc, array $topLevelDomain, array $callingCodes, array $altSpellings,
@@ -70,6 +71,7 @@ final class Country implements ModelInterface
     {
         $this->name = $name;
         $this->nativeName = $nativeName;
+        $this->capital = $capital;
         $this->numericCode = $numericCode;
         $this->alpha2Code = $alpha2Code;
         $this->alpha3Code = $alpha3Code;
@@ -98,6 +100,7 @@ final class Country implements ModelInterface
         return new self(
             $response['name'],
             $response['nativeName'],
+            $response['capital'],
             intval($response['numericCode']),
             $response['alpha2Code'],
             $response['alpha3Code'],
@@ -154,6 +157,14 @@ final class Country implements ModelInterface
     public function getNativeName(): string
     {
         return $this->nativeName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCapital(): string
+    {
+        return $this->capital;
     }
 
     /**
@@ -329,6 +340,7 @@ final class Country implements ModelInterface
         return [
             'name' => $this->name,
             'native_name' => $this->nativeName,
+            'capital' => $this->capital,
             'numeric_code' => $this->numericCode,
             'alpha_2_code' => $this->alpha2Code,
             'alpha_3_code' => $this->alpha3Code,
