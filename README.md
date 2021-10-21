@@ -1,3 +1,6 @@
+### Package is abandoned
+_Use this instead: https://packagist.org/packages/alzpk/restcountries-php-api-wrapper_
+
 # PHP wrapper for Restcountries.eu API
 PHP wrapper for restcountries.eu API, that returns a model with value objects, based on the response from the API.
 
