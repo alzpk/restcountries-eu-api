@@ -9,7 +9,7 @@ PHP wrapper for restcountries.eu API, that returns a model with value objects, b
 ```json
 {
   "php": "^7.4",
-  "guzzlehttp/guzzle": "7.4.x-dev",
+  "guzzlehttp/guzzle": "7.4.2",
   "ext-json": "*"
 }
 ```
